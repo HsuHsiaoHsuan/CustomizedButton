@@ -13,4 +13,11 @@
         android:text="This is a test text."
         android:background="@drawable/button_blue"/>
 
+    <Button
+        android:id="@+id/testButon2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:text="This is a test text."
+        android:background="@drawable/button_shadow"/>
 </RelativeLayout>

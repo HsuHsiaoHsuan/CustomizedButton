@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item>
+    <item android:state_pressed="true">
         <shape>
-            <gradient
-                android:startColor="#449def"
-                android:centerColor="#2f6699"
-                android:endColor="#449def"
-                android:angle="270"/>
+            <solid
+                android:color="#449def"/>
             <stroke
                 android:width="1dp"
                 android:color="#2f6699"/>
@@ -20,13 +17,21 @@
         </shape>
     </item>
 
-    <item android:state_pressed="true">
+    <item>
         <shape>
-            <solid
-                android:color="#449def"/>
+            <gradient
+                android:type="linear"
+                android:startColor="#449def"
+                android:centerColor="#2f6699"
+                android:endColor="#449def"
+                android:angle="270"/>
+            <!-- 漸層色 3 types：linear, radial, sweep -->
+            <!-- angle=0 時，表起始顏色在左，終止顏色在右，當 angle=90，起始顏色在下，終止顏色在上，當 angle=180，起始顏色在右，終止顏色在左，當 angle=270，起始顏色在上，終止顏色在下，而 angle 必須為 45 的倍數。 -->
+            <!-- 當 gradient:type="radial" 時，一定還要指定 gradientRadius 的值 -->
             <stroke
                 android:width="1dp"
                 android:color="#2f6699"/>
+            <!-- stroke 為框線厚度 -->
             <corners
                 android:radius="2dp"/>
             <padding
